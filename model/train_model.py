@@ -1,3 +1,4 @@
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -117,6 +118,7 @@ model = Sequential([
     Flatten(),
     Dense(128, activation='relu'),
     Dropout(0.7),
+
     Dense(num_classes, activation='softmax')
 ])
 
@@ -125,6 +127,7 @@ model.compile(
     loss='categorical_crossentropy',
     metrics=['accuracy']
 )
+
 
 model.summary()
 
